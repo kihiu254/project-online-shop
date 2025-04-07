@@ -1,0 +1,222 @@
+/* About Hero Section */
+.about-hero {
+    height: 60vh;
+    background: var(--primary-gradient);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.about-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/pattern.svg');
+    opacity: 0.1;
+    animation: patternMove 20s linear infinite;
+}
+
+.about-hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.about-hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.about-hero .subtitle {
+    font-size: 1.2rem;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 0.2s forwards;
+}
+
+/* Vision & Mission */
+.vision-mission {
+    padding: 5rem 0;
+}
+
+.vision-mission .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.vision-box, .mission-box {
+    padding: 2rem;
+    border-radius: 10px;
+    background: var(--bg-light);
+    text-align: center;
+    transition: var(--bounce-transition);
+}
+
+.vision-box:hover, .mission-box:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--card-shadow);
+}
+
+/* Timeline */
+.timeline {
+    padding: 5rem 0;
+    background: var(--bg-light);
+}
+
+.timeline-container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: var(--primary-gradient);
+}
+
+.timeline-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+
+.timeline-item .year {
+    width: 120px;
+    text-align: right;
+    padding-right: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.timeline-item .content {
+    width: calc(50% - 60px);
+    padding-left: 2rem;
+}
+
+/* Team Section */
+.team {
+    padding: 5rem 0;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.team-member {
+    text-align: center;
+    transition: var(--bounce-transition);
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+}
+
+.member-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1rem;
+    border: 3px solid transparent;
+    background: var(--primary-gradient);
+    padding: 3px;
+}
+
+.member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Values Section */
+.values {
+    padding: 5rem 0;
+    background: var(--bg-light);
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.value-card {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    transition: var(--bounce-transition);
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--card-shadow);
+}
+
+.value-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Animations */
+@keyframes patternMove {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .vision-mission .container {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline-container::before {
+        left: 0;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+    }
+
+    .timeline-item .year,
+    .timeline-item .content {
+        width: 100%;
+        padding: 1rem;
+        text-align: left;
+    }
+}

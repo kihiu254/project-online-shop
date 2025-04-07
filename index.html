@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LunaLuxe - Premium Kenyan fashion boutique offering contemporary African designs">
+    <meta name="theme-color" content="#2a2a2a">
+    <title>LunaLuxe - Kenyan Fashion Boutique</title>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="css/responsive.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" as="style">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css?v=1.2">
+    <link rel="stylesheet" href="css/responsive.css?v=1.1">
+    <link rel="stylesheet" href="css/countdown.css">
+    <link rel="stylesheet" href="css/product-grid.css">
+    
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    
+    <!-- Add Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    
+    <!-- Accessibility -->
+    <link rel="stylesheet" href="css/accessibility.css">
+    
+    <!-- Add Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Add our new animations CSS -->
+    <link rel="stylesheet" href="css/animations.css">
+    <!-- Product Showcase CSS -->
+    <link rel="stylesheet" href="css/showcase.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar glow-on-hover">
+        <div>Free shipping, 30-day return or refund guarantee.</div>
+        <div class="top-bar-links">
+            <a href="login.html">Login</a> |
+            <a href="signup.html">SIGN UP</a> |
+        
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <div class="main-header fade-in">
+        <div class="logo"><img src="images/logo 1.png" alt=""><span></span>
+        </div>
+        
+            <nav class="main-nav">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="customer-service.html">Customer Service</a></li>
+                <li><a href="#" onclick="alert('FAQ section coming soon!')">FAQ</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Add this to your header or any other section -->
+    <div class="theme-toggle">
+        <button id="theme-switch" class="theme-switch-btn">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+        <div class="header-actions">
+            <a href="#" class="search-icon"><i class="fas fa-search"></i></a>
+            <a href="wishlist.html" class="wishlist-icon">
+                <i class="fas fa-heart"></i>
+                <span class="wishlist-count">0</span>
+            </a>
+            <a href="cart.html" class="cart-icon">
+                <i class="fas fa-shopping-basket"></i>
+                <span class="cart-count">0</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Add this after the main header -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-container">
+            <div class="search-header">
+                <h2>Search Products</h2>
+                <button class="close-search" aria-label="Close search">×</button>
+            </div>
+            <form class="search-form">
+                <input type="text" class="search-input" placeholder="Search for products..." aria-label="Search">
+                <button type="submit" class="search-submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+            <div class="search-results"></div>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero__slider owl-carousel">
+                <div class="hero__items" style="background-image: url('images/banner-1.jpg');" data-parallax="0.5">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-5 col-lg-7 col-md-8">
+                                <div class="hero__text stagger-children">
+                                    <h6>Luxury Collection</h6>
+                                    <h2>Elegant African Prints</h2>
+                                    <p>Experience the perfect blend of traditional African patterns with modern sophistication. Each piece tells a unique story.</p>
+                                    <a href="shop.html?collection=luxury" class="primary-btn ripple magnetic-button">Explore Collection <i class="fas fa-arrow-right"></i></a>
+                                    <div class="hero__social">
+                                        <a href="https://www.facebook.com/share/1B5vFLJBBx/?mibextid=qi2Omg" target="_blank"><i class="fab fa-facebook"></i></a>
+                                        <a href="https://twitter.com/lunaluxe" target="_blank"><i class="fab fa-twitter"></i></a>
+                                        <a href="https://www.instagram.com/luna_luxe254?igsh=aG56MHBwZHMxY3I5" target="_blank"><i class="fab fa-instagram"></i></a>
+                                        <a href="https://www.tiktok.com/@luna_luxe254" target="_blank"><i class="fab fa-tiktok"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero__items" style="background-image: url('images/banner-2.jpg');">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-5 col-lg-7 col-md-8">
+                                <div class="hero__text">
+                                    <h6>Premium Style</h6>
+                                    <h2>Contemporary Fashion</h2>
+                                    <p>Discover our handcrafted pieces that combine comfort with unmatched style. Perfect for the modern trendsetter.</p>
+                                    <a href="shop.html?collection=premium" class="primary-btn">Shop Now <i class="fas fa-arrow-right"></i></a>
+                                    <div class="hero__social">
+                                        <a href="https://www.facebook.com/share/1B5vFLJBBx/?mibextid=qi2Omg" target="_blank"><i class="fab fa-facebook"></i></a>
+                                        <a href="https://twitter.com/lunaluxe" target="_blank"><i class="fab fa-twitter"></i></a>
+                                        <a href="https://www.instagram.com/luna_luxe254?igsh=aG56MHBwZHMxY3I5" target="_blank"><i class="fab fa-instagram"></i></a>
+                                        <a href="https://www.tiktok.com/@luna_luxe254" target="_blank"><i class="fab fa-tiktok"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero__items" style="background-image: url('images/banner-3.jpg');">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-5 col-lg-7 col-md-8">
+                                <div class="hero__text">
+                                    <h6>Exclusive Design</h6>
+                                    <h2>Timeless Elegance</h2>
+                                    <p>Elevate your wardrobe with our exclusive collection. Where tradition meets contemporary fashion.</p>
+                                    <a href="shop.html?collection=exclusive" class="primary-btn">View Collection <i class="fas fa-arrow-right"></i></a>
+                                    <div class="hero__social">
+                                        <a href="https://www.facebook.com/share/1B5vFLJBBx/?mibextid=qi2Omg" target="_blank"><i class="fab fa-facebook"></i></a>
+                                        <a href="https://twitter.com/lunaluxe" target="_blank"><i class="fab fa-twitter"></i></a>
+                                        <a href="https://www.instagram.com/luna_luxe254?igsh=aG56MHBwZHMxY3I5" target="_blank"><i class="fab fa-instagram"></i></a>
+                                        <a href="https://www.tiktok.com/@luna_luxe254" target="_blank"><i class="fab fa-tiktok"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Showcase Section -->
+        <section class="product-showcase">
+            <div class="container">
+                <div class="showcase-container">
+                    <div class="sidebar">
+                        <div class="sidebar-item">Clothings Hot</div>
+                        <div class="sidebar-item active">Shoe Collection</div>
+                        <div class="sidebar-item">Accessories</div>
+                    </div>
+                    
+                    <div class="main-content">
+                        <div class="price-banner">
+                            <span class="sale-text">Sale Of</span>
+                            <span class="price-text">KSH 3,499</span>
+                        </div>
+                        <div class="product-image">
+                            <img src="images/product-sale.png" alt="Multi-pocket Chest Bag Black">
+                        </div>
+                        
+                        <div class="product-details">
+                            <div class="deal-label">DEAL OF THE WEEK - KSH 3,499</div>
+                            <h1 class="product-title">Multi-pocket Chest Bag Black</h1>
+                            
+                            <div class="countdown">
+                                <div class="countdown-item">
+                                    <div class="countdown-number">28</div>
+                                    <div class="countdown-label">Days</div>
+                                </div>
+                                <div class="countdown-item">
+                                    <div class="countdown-number">20</div>
+                                    <div class="countdown-label">Hours</div>
+                                </div>
+                                <div class="countdown-item">
+                                    <div class="countdown-number">53</div>
+                                    <div class="countdown-label">Minutes</div>
+                                </div>
+                                <div class="countdown-item">
+                                    <div class="countdown-number">51</div>
+                                    <div class="countdown-label">Seconds</div>
+                                </div>
+                            </div>
+                            
+                            <button class="shop-now-btn">SHOP NOW</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products Section -->
+        <section class="featured-products">
+            <div class="container">
+                <nav class="section-links stagger-children" style="text-align: center; margin-bottom: 30px;">
+                    <a href="#" class="product-link active" data-category="best-sales">Best Sales</a>
+                    <a href="#" class="product-link" data-category="new-arrivals">New Arrivals</a>
+                    <a href="#" class="product-link" data-category="hot-sales">Hot Sales</a>
+                </nav>
+
+                <!-- Best Sales Section -->
+                <div class="products-section" id="best-sales">
+                    <div class="products-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin: 0 auto; max-width: 1200px; padding: 0 15px;">
+                        <!-- 12 Best Sales Products -->
+                        <div class="product-card hover-float glow-on-hover" data-fade>
+                            <div class="product-image">
+                                <img src="images/IMG-20250404-WA0015.jpg" alt="Designer Dress" loading="lazy">
+                            </div>
+                            <div class="product-details">
+                                <h3>Designer Dress</h3>
+                            </div>
+                        </div>
+                        <div class="product-card hover-float glow-on-hover" data-fade>
+                            <div class="product-image">
+                                <img src="images/IMG-20250404-WA0016.jpg" alt="Luxury Handbag">
+                            </div>
+                            <div class="product-details"><h3>Luxury Handbag</h3></div>
+                        </div>
+                        <div class="product-card hover-float glow-on-hover" data-fade>
+                            <div class="product-image">
+                                <img src="images/IMG-20250404-WA0017.jpg" alt="Signature Watch">
+                            </div>
+                            <div class="product-details"><h3>Signature Watch</h3></div>
+                        </div>
+                        <div class="product-card hover-float glow-on-hover" data-fade>
+                            <div class="product-image">
+                                <img src="images/IMG-20250404-WA0018.jpg" alt="Classic Shoes">
+                            </div>
+                            <div class="product-details"><h3>Classic Shoes</h></div>
+                        </div>
+                        <div class="product-card hover-float glow-on-hover" data-fade>
+                            <div class="product-image">
+                                <img src="images/IMG-20250404-WA0019.jpg" alt="Elegant Dress">
+                            </div>
+                            <div class="product-details"><h3>Elegant Dress</h3></div>
+                        </div>
+                        <div class="product-card hover-float glow-on-hover" data-fade>
+                            <div class="product-image">
+                                <img src="images/IMG-20250404-WA0020.jpg" alt="Premium Watch">
+                            </div>
+                            <div class="product-details"><h3>Premium Watch</h3></div>
+                        </div>
+                        <div class="product-card hover-float glow-on-hover" data-fade>
+                            <div class="product-image">
+                                <img src="images/IMG-20250404-WA0021.jpg" alt="Designer Bag">
+                            </div>
+                            <div class="product-details"><h3>Designer Bag</h3></div>
+                        </div>
+                        <div class="product-card hover-float glow-on-hover" data-fade>
+                            <div class="product-image">
+                                <img src="images/IMG-20250404-WA0022.jpg" alt="Fashion Boots">
+                            </div>
+                            <div class="product-details"><h3>Fashion Boots</h3></div>
+                        </div>
+                        <div class="product-card hover-float glow-on-hover" data-fade>
+                            <div class="product-image">
+                                <img src="images/IMG-20250404-WA0023.jpg" alt="Luxury Watch">
+                            </div>
+                            <div class="product-details"><h3>Luxury Watch</h3></div>
+                        </div>
+                        <div class="product-card hover-float glow-on-hover" data-fade>
+                            <div class="product-image">
+                                <img src="images/IMG-20250404-WA0024.jpg" alt="Classic Handbag">
+                            </div>
+                            <div class="product-details"><h3>Classic Handbag</h3></div>
+                        </div>
+                        <div class="product-card hover-float glow-on-hover" data-fade>
+                            <div class="product-image">
+                                <img src="images/IMG-20250404-WA0025.jpg" alt="Designer Shoes">
+                            </div>
+                            <div class="product-details"><h3>Designer Shoes</h3></div>
+                        </div>
+                        <div class="product-card hover-float glow-on-hover" data-fade>
+                            <div class="product-image">
+                                <img src="images/IMG-20250404-WA0026.jpg" alt="Premium Dress">
+                            </div>
+                            <div class="product-details"><h3>Premium Dress</h></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Arrivals Section -->
+                <div class="products-section" id="new-arrivals" style="display: none;">
+                    <div class="products-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin: 0 auto; max-width: 1200px; padding: 0 15px;">
+                        <!-- 12 New Arrivals Products -->
+                        <div class="product-card hover-float glow-on-hover" data-fade>
+                            <div class="product-image">
+                                <img src="images/IMG-20250404-WA0027.jpg" alt="Modern Dress" loading="lazy">
+                            </div>
+                            <div class="product-details">
+                                <h3>Modern Dress</h3>
+                            </div>
+                        </div>
+                        <div class="product-card hover-float glow-on-hover" data-fade>
+                            <div class="product-image">
+                                <img src="images/IMG-20250404-WA0028.jpg" alt="Trendy Bag">
+                            </div>
+                            <div class="product-details"><h3>Trendy Bag</h3></div>
+                        </div>
+                        <div class="product-card hover-float glow-on-hover" data-fade>
+                            <div class="product-image">
+                                <img src="images/IMG-20250404-WA0029.jpg" alt="Fashion Watch">
+                            </div>
+                            <div class="product-details"><h3>Fashion Watch</h3></div>
+                        </div>
+                        <div class="product-card hover-float glow-on-hover" data-fade>
+                            <div class="product-image">
+                                <img src="images/IMG-20250404-WA0030.jpg" alt="Stylish Shoes">
+                            </div>
+                            <div class="product-details"><h3>Stylish Shoes</h></div>
+                        </div>
+                        <div class="product-card hover-float glow-on-hover" data-fade>
+                            <div class="product-image">
+                                <img src="images/IMG-20250404-WA0031.jpg" alt="Chic Dress">
+                            </div>
+                            <div class="product-details"><h3>Chic Dress</h></div>
+                        </div>
+                        <div class="product-card hover-float glow-on-hover" data-fade>
+                            <div class="product-image">
+                                <img src="images/IMG-20250404-WA0032.jpg" alt="Modern Watch">
+                            </div>
+                            <div class="product-details"><h3>Modern Watch</h></div>
+                        </div>
+                        <div class="product-card hover-float glow-on-hover" data-fade>
+                            <div class="product-image">
+                                <img src="images/IMG-20250404-WA0033.jpg" alt="Fashion Bag">
+                            </div>
+                            <div class="product-details"><h3>Fashion Bag</h></div>
+                        </div>
+                        <div class="product-card hover-float glow-on-hover" data-fade>
+                            <div class="product-image">
+                                <img src="images/IMG-20250404-WA0034.jpg" alt="Trendy Boots">
+                            </div>
+                            <div class="product-details"><h3>Trendy Boots</h></div>
+                        </div>
+                        <div class="product-card hover-float glow-on-hover" data-fade>
+                            <div class="product-image">
+                                <img src="images/IMG-20250404-WA0035.jpg" alt="Smart Watch">
+                            </div>
+                            <div class="product-details"><h3>Smart Watch</h></div>
+                        </div>
+                        <div class="product-card hover-float glow-on-hover" data-fade>
+                            <div class="product-image">
+                                <img src="images/IMG-20250404-WA0036.jpg" alt="Designer Tote">
+                            </div>
+                            <div class="product-details"><h3>Designer Tote</h></div>
+                        </div>
+                        <div class="product-card hover-float glow-on-hover" data-fade>
+                            <div class="product-image">
+                                <img src="images/IMG-20250404-WA0037.jpg" alt="Modern Sneakers">
+                            </div>
+                            <div class="product-details"><h3>Modern Sneakers</h></div>
+                        </div>
+                        <div class="product-card hover-float glow-on-hover" data-fade>
+                            <div class="product-image">
+                                <img src="images/IMG-20250404-WA0038.jpg" alt="Evening Dress">
+                            </div>
+                            <div class="product-details"><h3>Evening Dress</h></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hot Sales Section -->
+                <div class="products-section" id="hot-sales" style="display: none;">
+                    <div class="products-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin: 0 auto; max-width: 1200px; padding: 0 15px;">
+                        <!-- 8 Hot Sales Products -->
+                        <div class="product-card hover-float glow-on-hover" data-fade>
+                            <div class="product-image">
+                                <img src="images/IMG-20250404-WA0039.jpg" alt="Sale Dress" loading="lazy">
+                            </div>
+                            <div class="product-details">
+                                <h3>Sale Dress</h3>
+                            </div>
+                        </div>
+                        <div class="product-card hover-float glow-on-hover" data-fade>
+                            <div class="product-image">
+                                <img src="images/IMG-20250404-WA0040.jpg" alt="Discount Bag">
+                            </div>
+                            <div class="product-details"><h3>Discount Bag</h3></div>
+                        </div>
+                        <div class="product-card hover-float glow-on-hover" data-fade>
+                            <div class="product-image">
+                                <img src="images/IMG-20250404-WA0041.jpg" alt="Special Watch">
+                            </div>
+                            <div class="product-details"><h3>Special Watch</h3></div>
+                        </div>
+                        <div class="product-card hover-float glow-on-hover" data-fade>
+                            <div class="product-image">
+                                <img src="images/IMG-20250404-WA0042.jpg" alt="Sale Shoes">
+                            </div>
+                            <div class="product-details"><h3>Sale Shoes</h></div>
+                        </div>
+                        <div class="product-card hover-float glow-on-hover" data-fade>
+                            <div class="product-image">
+                                <img src="images/IMG-20250404-WA0043.jpg" alt="Special Dress">
+                            </div>
+                            <div class="product-details"><h3>Special Dress</h></div>
+                        </div>
+                        <div class="product-card hover-float glow-on-hover" data-fade>
+                            <div class="product-image">
+                                <img src="images/IMG-20250404-WA0044.jpg" alt="Discount Watch">
+                            </div>
+                            <div class="product-details"><h3>Discount Watch</h3></div>
+                        </div>
+                        <div class="product-card hover-float glow-on-hover" data-fade>
+                            <div class="product-image">
+                                <img src="images/IMG-20250404-WA0045.jpg" alt="Sale Bag">
+                            </div>
+                            <div class="product-details"><h3>Sale Bag</h></div>
+                        </div>
+                        <div class="product-card hover-float glow-on-hover" data-fade>
+                            <div class="product-image">
+                                <img src="images/IMG-20250404-WA0046.jpg" alt="Special Boots">
+                            </div>
+                            <div class="product-details"><h3>Special Boots</h></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rest of the file content remains unchanged -->
+        <!-- About Snippet, Newsletter, Countdown, Footer sections -->
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Luna Luxe</h3>
+                <p>The customer is at the heart of our unique business model, which includes design.</p>
+                <div class="payment-methods">
+                    <img src="images/payment.png" alt="M-Pesa">
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#" onclick="alert('FAQ section coming soon!')">FAQ</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li><a href="tel:+254112081866">+254 112081866</a></li>
+                    <li><a href="mailto:info@lunaluxe.co.ke">info@lunaluxe.co.ke</a></li>
+                    <li>Luna Luxe Fashion House</li>
+                    <li>Nairobi, Kenya</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Customer Care</h3>
+                <ul>
+                    <li><a href="shipping.html">Shipping Information</a></li>
+                    <li><a href="returns.html">Returns &amp; Exchanges</a></li>
+                    <li><a href="size-guide.html">Size Guide</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/1B5vFLJBBx/?mibextid=qi2Omg" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/luna_luxe254?igsh=aG56MHBwZHMxY3I5" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@luna_luxe254" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://twitter.com/lunaluxe" target="_blank"><i class="fab fa-twitter"></i></a>
+
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            Copyright © 2025 All rights reserved | Luna Luxe
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/countdown.js"></script>
+    <script src="js/product-filters.js"></script>
+    <script src="js/accessibility.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/showcase.js"></script>
+    <script>
+        // Initialize AccessibilityManager
+        window.addEventListener('DOMContentLoaded', () => {
+            const accessibility = new AccessibilityManager();
+            window.accessibility = accessibility;
+            accessibility.setupColorSchemeToggle();
+        });
+
+        // Filter tabs
+        document.querySelectorAll('.filter-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Action buttons
+        document.querySelectorAll('.action-button').forEach(button => {
+            button.addEventListener('click', function() {
+                alert('Feature coming soon!');
+            });
+        });
+
+        // Initialize Owl Carousel
+        $(document).ready(function(){
+            $('.hero__slider').owlCarousel({
+                loop: true,
+                margin: 0,
+                items: 1,
+                dots: false,
+                nav: true,
+                navText: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"],
+                autoplay: true,
+                autoplayTimeout: 5000,
+                smartSpeed: 1000,
+                animateOut: 'fadeOut',
+                mouseDrag: true,
+                touchDrag: true
+            });
+        });
+        
+    </script>
+</body>
+</html>

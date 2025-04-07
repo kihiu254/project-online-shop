@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Luna Luxe</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header (same as shop.html) -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo 1.png" alt="MR TRENDY Logo">
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="customer-service.html">Customer Service</a></li>
+                    <li><a href="#" onclick="alert('FAQ section coming soon!')">FAQ</a></li>
+                </ul>
+                <div class="header-actions">
+                    <a href="wishlist.html" class="wishlist-icon">
+                        <i class="fas fa-heart"></i>
+                        <span class="wishlist-count">0</span>
+                    </a>
+                    <a href="cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="cart-page">
+        <div class="cart-header">
+            <h1>Shopping Cart</h1>
+            <button class="clear-cart">Clear Cart</button>
+        </div>
+
+        <div class="cart-container">
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will be dynamically added here -->
+            </div>
+
+            <div class="cart-summary">
+                <h3>Order Summary</h3>
+                <div class="summary-item">
+                    <span>Subtotal</span>
+                    <span id="subtotal">$0.00</span>
+                </div>
+                <div class="summary-item">
+                    <span>Shipping</span>
+                    <span id="shipping">$0.00</span>
+                </div>
+                <div class="summary-item total">
+                    <span>Total</span>
+                    <span id="total">$0.00</span>
+                </div>
+                <button class="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+
+        <div class="cart-empty hidden">
+            <i class="fas fa-shopping-cart"></i>
+            <h2>Your cart is empty</h2>
+            <p>Add items to your cart to proceed with checkout</p>
+            <a href="shop.html" class="continue-shopping">Continue Shopping</a>
+        </div>
+    </main>
+
+    <!-- Footer (same as shop.html) -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#" onclick="alert('FAQ section coming soon!')">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Customer Care</h3>
+                    <ul>
+                        <li><a href="shipping.html">Shipping Information</a></li>
+                        <li><a href="returns.html">Returns & Exchanges</a></li>
+                        <li><a href="size-guide.html">Size Guide</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/1B5vFLJBBx/?mibextid=qi2Omg" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/luna_luxe254?igsh=aG56MHBwZHMxY3I5" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/lunaluxe" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.tiktok.com/@luna_luxe254" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Luna Luxe. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/cart.js"></script>
+</body>
+</html>

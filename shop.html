@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Luna Luxe</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/shop.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div>Free shipping, 30-day return or refund guarantee.</div>
+        <div class="top-bar-links">
+                            <button class="color-scheme-toggle" title="Toggle color scheme" aria-label="Toggle between light and dark color scheme"></button> |
+            <a href="login.html">Login</a> |
+            <a href="signup.html">SIGN UP</a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo 1.png" alt="Luna Luxe Logo">
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html" class="active">Shop</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="customer-service.html">Customer Service</a></li>
+                    <li><a href="#" onclick="alert('FAQ section coming soon!')">FAQ</a></li>
+                </ul>
+                <div class="cart-icon">
+                    <a href="wishlist.html" class="wishlist-link">
+                        <i class="fas fa-heart"></i>
+                        <span class="wishlist-count">0</span>
+                    </a>
+                    <a href="cart.html" class="cart-link">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Shop Header -->
+   <h3>Our Collection</h3>
+
+    <!-- Filter and Categories Bar -->
+    <div class="filter-categories-bar">
+        <div class="container">
+            <div class="categories-section">
+                <h2 class="section-title">Shop By Category</h2>
+                <div class="categories-container">
+                    <div class="category-item">
+                        <div class="category-header">
+                            <i class="fas fa-male"></i>
+                            <span>Men's Fashion</span>
+                            <i class="fas fa-chevron-down toggle-icon"></i>
+                        </div>
+                        <div class="category-dropdown">
+                            <div class="category-option" data-category="mens-tshirts">
+                                <i class="fas fa-tshirt"></i>
+                                <span>T-Shirts</span>
+                            </div>
+                            <div class="category-option" data-category="mens-shirts">
+                                <i class="fas fa-suitcase-rolling"></i>
+                                <span>Shirts</span>
+                            </div>
+                            <div class="category-option" data-category="mens-pants">
+                                <i class="fas fa-jeans"></i>
+                                <span>Pants</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="category-item">
+                        <div class="category-header">
+                            <i class="fas fa-female"></i>
+                            <span>Women's Fashion</span>
+                            <i class="fas fa-chevron-down toggle-icon"></i>
+                        </div>
+                        <div class="category-dropdown">
+                            <div class="category-option" data-category="womens-dresses">
+                                <i class="fas fa-dress"></i>
+                                <span>Dresses</span>
+                            </div>
+                            <div class="category-option" data-category="womens-blouses">
+                                <i class="fas fa-blouse"></i>
+                                <span>Blouses</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="category-item">
+                        <div class="category-header">
+                            <i class="fas fa-globe-africa"></i>
+                            <span>African Designs</span>
+                            <i class="fas fa-chevron-down toggle-icon"></i>
+                        </div>
+                        <div class="category-dropdown">
+                            <div class="category-option">
+                                <i class="fas fa-tshirt"></i>
+                                <span>Printed Shirts</span>
+                            </div>
+                            <div class="category-option">
+                                <i class="fas fa-dress"></i>
+                                <span>Traditional Dresses</span>
+                            </div>
+                            <div class="category-option">
+                                <i class="fas fa-accessible-icon"></i>
+                                <span>Accessories</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="category-item">
+                        <div class="category-header">
+                            <i class="fas fa-heart"></i>
+                            <span>Wedding Collection</span>
+                            <i class="fas fa-chevron-down toggle-icon"></i>
+                        </div>
+                        <div class="category-dropdown">
+                            <div class="category-option">
+                                <i class="fas fa-bride"></i>
+                                <span>Bridal Wear</span>
+                            </div>
+                            <div class="category-option">
+                                <i class="fas fa-groom"></i>
+                                <span>Groom Wear</span>
+                            </div>
+                            <div class="category-option">
+                                <i class="fas fa-gifts"></i>
+                                <span>Wedding Accessories</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="category-item">
+                        <div class="category-header">
+                            <i class="fas fa-child"></i>
+                            <span>Kids Fashion</span>
+                            <i class="fas fa-chevron-down toggle-icon"></i>
+                        </div>
+                        <div class="category-dropdown">
+                            <div class="category-option">
+                                <i class="fas fa-child"></i>
+                                <span>Boys</span>
+                            </div>
+                            <div class="category-option">
+                                <i class="fas fa-child"></i>
+                                <span>Girls</span>
+                            </div>
+                            <div class="category-option">
+                                <i class="fas fa-socks"></i>
+                                <span>Accessories</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="category-item">
+                        <div class="category-header">
+                            <i class="fas fa-shoe-prints"></i>
+                            <span>Footwear</span>
+                            <i class="fas fa-chevron-down toggle-icon"></i>
+                        </div>
+                        <div class="category-dropdown">
+                            <div class="category-option" data-category="footwear-sneakers">
+                                <i class="fas fa-running"></i>
+                                <span>Sneakers</span>
+                            </div>
+                            <div class="category-option" data-category="footwear-sandals">
+                                <i class="fas fa-sandal"></i>
+                                <span>Sandals</span>
+                            </div>
+                            <div class="category-option" data-category="footwear-boots">
+                                <i class="fas fa-boot"></i>
+                                <span>Boots</span>
+                            </div>
+                            <div class="category-option" data-category="footwear-heels">
+                                <i class="fas fa-female"></i>
+                                <span>Heels</span>
+                            </div>
+                            <div class="category-option" data-category="footwear-loafers">
+                                <i class="fas fa-shoe-prints"></i>
+                                <span>Loafers</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Products Section -->
+    <div class="container">
+        <div class="products-section">
+            <h2 class="section-title">Our Products</h2>
+            <div class="products-grid">
+                <!-- Product Card 1 -->
+                <div class="product-card" data-category="womens-dresses">
+                    <div class="product-image">
+                        <img src="images/IMG-20250404-WA0015.jpg" alt="Designer Dress" loading="lazy">
+                        <div class="hover-actions">
+                            <button class="quick-view" title="Quick view" aria-label="Quick view of Designer Dress"><i class="fas fa-eye"></i></button>
+                            <button class="add-to-wishlist" title="Add to wishlist" aria-label="Add Designer Dress to your wishlist"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Designer Dress</h3>
+                        <div class="product-price">KSh 19,999</div>
+                        <div class="product-rating" data-rating="4.8">★★★★★</div>
+                        <div class="color-options">
+                            <div class="color-option color-black" data-color="black"></div>
+                            <div class="color-option color-red" data-color="red"></div>
+                            <div class="color-option color-blue" data-color="blue"></div>
+                        </div>
+                        <div class="size-options">
+                            <div class="size-option" data-size="S">S</div>
+                            <div class="size-option" data-size="M">M</div>
+                            <div class="size-option" data-size="L">L</div>
+                            <div class="size-option" data-size="XL">XL</div>
+                        </div>
+                        <div class="product-actions">
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                            <button class="wishlist-btn" title="Add to Wishlist">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="product-card" data-category="footwear-sneakers">
+                    <div class="product-image">
+                        <img src="images/s6.webp" alt="Classic Leather Boots" loading="lazy">
+                        <div class="hover-actions">
+                            <button class="quick-view" title="Quick view" aria-label="Quick view of Classic Leather Boots"><i class="fas fa-eye"></i></button>
+                            <button class="add-to-wishlist" title="Add to wishlist" aria-label="Add Classic Leather Boots to your wishlist"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Classic Leather Sneakers</h3>
+                        <div class="product-price">KSh 22,999</div>
+                        <div class="product-rating" data-rating="4.9">★★★★★</div>
+                        <div class="color-options">
+                            <div class="color-option color-brown" data-color="brown"></div>
+                            <div class="color-option color-black" data-color="black"></div>
+                        </div>
+                        <div class="size-options">
+                            <div class="size-option" data-size="38">38</div>
+                            <div class="size-option" data-size="39">39</div>
+                            <div class="size-option" data-size="40">40</div>
+                            <div class="size-option" data-size="41">41</div>
+                            <div class="size-option" data-size="42">42</div>
+                        </div>
+                        <div class="product-actions">
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                            <button class="wishlist-btn" title="Add to Wishlist">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 3 -->
+                <div class="product-card" data-category="African Designs-Accesories">
+                    <div class="product-image">
+                        <img src="images/11.webp" alt="Designer cream coach" loading="lazy">
+                        <div class="hover-actions">
+                            <button class="quick-view" title="Quick view" aria-label="Quick view of Designer Dress"><i class="fas fa-eye"></i></button>
+                            <button class="add-to-wishlist" title="Add to wishlist" aria-label="Add Designer Dress to your wishlist"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Cream Coach</h3>
+                        <div class="product-price">KSh 4,999</div>
+                        <div class="product-rating" data-rating="4.8">★★★★★</div>
+                        <div class="color-options">
+                            <div class="color-option color-black" data-color="black"></div>
+                            <div class="color-option color-red" data-color="red"></div>
+                            <div class="color-option color-blue" data-color="blue"></div>
+                        </div>
+                        <div class="size-options">
+                            <div class="size-option" data-size="S">S</div>
+                            <div class="size-option" data-size="M">M</div>
+                            <div class="size-option" data-size="L">L</div>
+                            <div class="size-option" data-size="XL">XL</div>
+                        </div>
+                        <div class="product-actions">
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                            <button class="wishlist-btn" title="Add to Wishlist">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 4 -->
+                <div class="product-card" data-category="African Designs-Accesories">
+                    <div class="product-image">
+                        <img src="images/2.webp" alt="Women's Fashion" loading="lazy">
+                        <div class="hover-actions">
+                            <button class="quick-view" title="Quick view" aria-label="Quick view of Designer Dress"><i class="fas fa-eye"></i></button>
+                            <button class="add-to-wishlist" title="Add to wishlist" aria-label="Add Designer Dress to your wishlist"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Christian Dior</h3>
+                        <div class="product-price">KSh 4,999</div>
+                        <div class="product-rating" data-rating="4.8">★★★★★</div>
+                        <div class="color-options">
+                            <div class="color-option color-black" data-color="black"></div>
+                            <div class="color-option color-red" data-color="red"></div>
+                            <div class="color-option color-blue" data-color="blue"></div>
+                        </div>
+                        <div class="size-options">
+                            <div class="size-option" data-size="S">S</div>
+                            <div class="size-option" data-size="M">M</div>
+                            <div class="size-option" data-size="L">L</div>
+                            <div class="size-option" data-size="XL">XL</div>
+                        </div>
+                        <div class="product-actions">
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                            <button class="wishlist-btn" title="Add to Wishlist">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 5 -->
+                <div class="product-card" data-category="footwear-sneakers">
+                    <div class="product-image">
+                        <img src="images/s5.webp" alt="Designer Sneakers" loading="lazy">
+                        <div class="hover-actions">
+                            <button class="quick-view" title="Quick view" aria-label="Quick view of Designer Dress"><i class="fas fa-eye"></i></button>
+                            <button class="add-to-wishlist" title="Add to wishlist" aria-label="Add Designer Dress to your wishlist"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Designer Dress</h3>
+                        <div class="product-price">KSh 4,000</div>
+                        <div class="product-rating" data-rating="4.8">★★★★★</div>
+                        <div class="color-options">
+                            <div class="color-option color-black" data-color="black"></div>
+                            <div class="color-option color-red" data-color="red"></div>
+                            <div class="color-option color-blue" data-color="blue"></div>
+                        </div>
+                        <div class="size-options">
+                            <div class="size-option" data-size="40">40</div>
+                            <div class="size-option" data-size="41">41</div>
+                            <div class="size-option" data-size="42">42</div>
+                            <div class="size-option" data-size="43">43</div>
+                        </div>
+                        <div class="product-actions">
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                            <button class="wishlist-btn" title="Add to Wishlist">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 6 -->
+                <div class="product-card" data-category="footwear-sandals">
+                    <div class="product-image">
+                        <img src="images/IMG-20250404-WA0057.jpg" alt="Designer Dress" loading="lazy">
+                        <div class="hover-actions">
+                            <button class="quick-view" title="Quick view" aria-label="Quick view of Designer Dress"><i class="fas fa-eye"></i></button>
+                            <button class="add-to-wishlist" title="Add to wishlist" aria-label="Add Designer Dress to your wishlist"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Designer Sandals</h3>
+                        <div class="product-price">KSh 3,500</div>
+                        <div class="product-rating" data-rating="4.8">★★★★★</div>
+                        <div class="color-options">
+                            <div class="color-option color-black" data-color="black"></div>
+                            <div class="color-option color-red" data-color="red"></div>
+                            <div class="color-option color-blue" data-color="blue"></div>
+                        </div>
+                        <div class="size-options">
+                            <div class="size-option" data-size="41">41</div>
+                            <div class="size-option" data-size="42">42</div>
+                            <div class="size-option" data-size="43">43</div>
+                            <div class="size-option" data-size="44">44</div>
+                        </div>
+                        <div class="product-actions">
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                            <button class="wishlist-btn" title="Add to Wishlist">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 7 -->
+                <div class="product-card" data-category="womens-dresses">
+                    <div class="product-image">
+                        <img src="images/IMG-20250404-WA0015.jpg" alt="Designer Dress" loading="lazy">
+                        <div class="hover-actions">
+                            <button class="quick-view" title="Quick view" aria-label="Quick view of Designer Dress"><i class="fas fa-eye"></i></button>
+                            <button class="add-to-wishlist" title="Add to wishlist" aria-label="Add Designer Dress to your wishlist"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Designer Dress</h3>
+                        <div class="product-price">KSh 19,999</div>
+                        <div class="product-rating" data-rating="4.8">★★★★★</div>
+                        <div class="color-options">
+                            <div class="color-option color-black" data-color="black"></div>
+                            <div class="color-option color-red" data-color="red"></div>
+                            <div class="color-option color-blue" data-color="blue"></div>
+                        </div>
+                        <div class="size-options">
+                            <div class="size-option" data-size="S">S</div>
+                            <div class="size-option" data-size="M">M</div>
+                            <div class="size-option" data-size="L">L</div>
+                            <div class="size-option" data-size="XL">XL</div>
+                        </div>
+                        <div class="product-actions">
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                            <button class="wishlist-btn" title="Add to Wishlist">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 8 -->
+                <div class="product-card" data-category="Men's Fashion-shirts">
+                    <div class="product-image">
+                        <img src="images/IMG-20250404-WA0015.jpg" alt="Designer Dress" loading="lazy">
+                        <div class="hover-actions">
+                            <button class="quick-view" title="Quick view" aria-label="Quick view of Designer Dress"><i class="fas fa-eye"></i></button>
+                            <button class="add-to-wishlist" title="Add to wishlist" aria-label="Add Designer Dress to your wishlist"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Designer Dress</h3>
+                        <div class="product-price">KSh 19,999</div>
+                        <div class="product-rating" data-rating="4.8">★★★★★</div>
+                        <div class="color-options">
+                            <div class="color-option color-black" data-color="black"></div>
+                            <div class="color-option color-red" data-color="red"></div>
+                            <div class="color-option color-blue" data-color="blue"></div>
+                        </div>
+                        <div class="size-options">
+                            <div class="size-option" data-size="S">S</div>
+                            <div class="size-option" data-size="M">M</div>
+                            <div class="size-option" data-size="L">L</div>
+                            <div class="size-option" data-size="XL">XL</div>
+                        </div>
+                        <div class="product-actions">
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                            <button class="wishlist-btn" title="Add to Wishlist">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 9 -->
+                <div class="product-card" data-category="footwear-loafers">
+                    <div class="product-image">
+                        <img src="images/IMG-20250404-WA0032.jpg" alt="Designer Dress" loading="lazy">
+                        <div class="hover-actions">
+                            <button class="quick-view" title="Quick view" aria-label="Quick view of Designer Dress"><i class="fas fa-eye"></i></button>
+                            <button class="add-to-wishlist" title="Add to wishlist" aria-label="Add Designer Dress to your wishlist"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Designer Sneakers</h3>
+                        <div class="product-price">KSh 4,500</div>
+                        <div class="product-rating" data-rating="4.8">★★★★★</div>
+                        <div class="color-options">
+                            <div class="color-option color-black" data-color="black"></div>
+                            <div class="color-option color-red" data-color="red"></div>
+                            <div class="color-option color-light-blue" data-color="light-blue"></div>
+                        </div>
+                        <div class="size-options">
+                            <div class="size-option" data-size="40">40</div>
+                            <div class="size-option" data-size="42">42</div>
+                            <div class="size-option" data-size="43">43</div>
+                            <div class="size-option" data-size="44">44</div>
+                        </div>
+                        <div class="product-actions">
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                            <button class="wishlist-btn" title="Add to Wishlist">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Instagram Feed -->
+    <section class="instagram-feed">
+        <div class="container">
+            <h2 class="section-title">Follow Us on Instagram</h2>
+            <div class="instagram-grid">
+                <div class="instagram-item">
+                    <img src="images/logo2.png" alt="Instagram Post">
+                </div>
+                <div class="instagram-item">
+                    <img src="images/logo2.png" alt="Instagram Post">
+                </div>
+                <div class="instagram-item">
+                    <img src="images/logo2.png" alt="Instagram Post">
+                </div>
+                <div class="instagram-item">
+                    <img src="images/logo2.png" alt="Instagram Post">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <h3>Subscribe to Our Newsletter</h3>
+            <p>Get the latest updates on new arrivals and exclusive offers</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email address">
+                                <button type="submit" title="Subscribe to newsletter" aria-label="Subscribe to our newsletter">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#" onclick="alert('FAQ section coming soon!')">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Customer Care</h3>
+                    <ul>
+                        <li><a href="shipping.html">Shipping Information</a></li>
+                        <li><a href="returns.html">Returns &amp; Exchanges</a></li>
+                        <li><a href="size-guide.html">Size Guide</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/1B5vFLJBBx/?mibextid=qi2Omg" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/luna_luxe254?igsh=aG56MHBwZHMxY3I5" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram page"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/lunaluxe" target="_blank" rel="noopener noreferrer" aria-label="Visit our Twitter page"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.tiktok.com/@luna_luxe254" target="_blank" rel="noopener noreferrer" aria-label="Visit our TikTok page"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Luna Luxe. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/shop.js"></script>
+    <script src="js/product-interactions.js"></script>
+    <script>
+        // Initialize category options with animation delay
+        document.querySelectorAll('.category-option').forEach((option, index) => {
+            option.style.setProperty('--index', index);
+        });
+        
+    </script>
+</body>
+</html>

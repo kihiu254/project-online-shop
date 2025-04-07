@@ -1,0 +1,227 @@
+/* Customer Service Style Animations */
+:root {
+  --easing: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hover Effects */
+.hover-float {
+  transition: all 0.3s var(--easing);
+}
+
+.hover-float:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Fade Effects */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s var(--easing) forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* Staggered Animations */
+.stagger-children > * {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s var(--easing) forwards;
+  animation-delay: calc(var(--order) * 0.1s);
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Button Effects */
+.button-effect {
+  transition: all 0.3s var(--easing);
+}
+
+.button-effect:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.button-effect:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Effects */
+.card-hover {
+  transition: all 0.3s var(--easing);
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Link Effects */
+.link-hover {
+  transition: color 0.3s var(--easing);
+}
+
+.link-hover:hover {
+  color: #3498db;
+}
+
+/* Ripple Effect */
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(0);
+    animation: rippleEffect 0.6s linear;
+    pointer-events: none;
+}
+
+@keyframes rippleEffect {
+    to {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+/* Heart Animation */
+.heart-animation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle, #ff6b6b 0%, transparent 60%);
+    border-radius: 50%;
+    animation: heartPulse 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    pointer-events: none;
+}
+
+@keyframes heartPulse {
+    0% { transform: translate(-50%, -50%) scale(0); opacity: 1; }
+    100% { transform: translate(-50%, -50%) scale(1); opacity: 0; }
+}
+
+/* Notification Styles */
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+}
+
+.notification.success {
+    border-left: 4px solid #4CAF50;
+}
+
+.notification.error {
+    border-left: 4px solid #f44336;
+}
+
+/* Cart Button Animation */
+.add-to-cart-btn.adding {
+    background: linear-gradient(270deg, #6C63FF, #4ECDC4);
+    background-size: 200% 100%;
+    animation: loading 1s infinite linear;
+}
+
+.add-to-cart-btn.added {
+    background: #4CAF50;
+    animation: addedPop 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes loading {
+    0% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes addedPop {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* Modal Animation */
+.quick-view-modal {
+    opacity: 0;
+    transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-content {
+    transform: translateY(20px);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.quick-view-modal[style*="opacity: 1"] .modal-content {
+    transform: translateY(0);
+}
+
+/* 3D Card Hover Effect */
+.product-card {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.product-image, .product-info {
+    backface-visibility: hidden;
+}
+
+/* Staggered Animation Delays */
+.product-card:nth-child(1) { animation-delay: 0.1s; }
+.product-card:nth-child(2) { animation-delay: 0.2s; }
+.product-card:nth-child(3) { animation-delay: 0.3s; }
+.product-card:nth-child(4) { animation-delay: 0.4s; }
+.product-card:nth-child(5) { animation-delay: 0.5s; }
+.product-card:nth-child(6) { animation-delay: 0.6s; }
+
+/* Category Animation */
+.category-option {
+    animation: slideIn 0.3s cubic-bezier(0.4, 0, 0.2, 1) both;
+    animation-delay: calc(var(--index) * 0.1s);
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #6C63FF;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #4ECDC4;
+}

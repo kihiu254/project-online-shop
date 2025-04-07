@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - LunaLuxe</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/checkout.css">
+    <link rel="stylesheet" href="css/loading-states.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="images/logo 1.png"><h1>LunaLuxe</h1></a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="customer-service.html">Customer Service</a></li>
+                    <li><a href="#" onclick="alert('FAQ section coming soon!')">FAQ</a></li>
+                </ul>
+                <div class="cart-icon">
+                    <a href="cart.html" class="cart-link">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+            </nav>
+            <div class="checkout-steps">
+                <span class="progress-step active" data-step="1">1</span>
+                <span class="step-divider">></span>
+                <span class="progress-step" data-step="2">2</span>
+                <span class="step-divider">></span>
+                <span class="progress-step" data-step="3">3</span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="checkout-container">
+        <div class="checkout-content">
+            <!-- Customer Details Section -->
+            <section id="customerDetails" class="checkout-section active">
+                <h2>Customer Details</h2>
+                <form id="customerForm" class="checkout-form">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="254700000000" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Delivery Address</label>
+                        <textarea id="address" name="address" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="city" required>
+                    </div>
+                    <button type="submit" class="btn-primary" aria-label="Continue to Payment">
+                        <span class="button-text">Continue to Payment</span>
+                        <div class="spinner" style="display: none;"></div>
+                    </button>
+                </form>
+            </section>
+
+            <!-- Payment Method Section -->
+            <section id="paymentMethod" class="checkout-section">
+                <h2>Select Payment Method</h2>
+                <div class="payment-options">
+                    <div class="payment-option" data-method="mpesa">
+                        <div class="payment-logo">
+                            <img src="images/payment/mpesa-logo.png" alt="M-Pesa">
+                        </div>
+                        <span class="provider-name">M-Pesa</span>
+                    </div>
+                    <div class="payment-option" data-method="visa">
+                        <div class="payment-logo">
+                            <img src="images/payment/visa-logo.png" alt="Visa">
+                        </div>
+                        <span class="provider-name">Credit/Debit Card</span>
+                    </div>
+                </div>
+
+                <!-- M-Pesa Payment Form -->
+                <form id="mpesaForm" class="payment-form">
+                    <div class="form-group">
+                        <label for="mpesaPhone">M-Pesa Phone Number</label>
+                        <input type="tel" id="mpesaPhone" name="mpesaPhone" placeholder="254700000000" required>
+                    </div>
+                    <button type="submit" class="btn-primary">
+                        <span class="button-text">Pay with M-Pesa</span>
+                        <div class="spinner" style="display: none;"></div>
+                    </button>
+                </form>
+
+                <!-- Visa Payment Form -->
+                <form id="visaForm" class="payment-form">
+                    <div class="form-group">
+                        <label for="cardNumber">Card Number</label>
+                        <div class="card-input-group">
+                            <input type="text" id="cardNumber" name="cardNumber" placeholder="4111 1111 1111 1111" required>
+                            <div class="card-type"></div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="expiryDate">Expiry Date</label>
+                            <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" name="cvv" placeholder="123" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="cardName">Name on Card</label>
+                        <input type="text" id="cardName" name="cardName" required>
+                    </div>
+                    <button type="submit" class="btn-primary">
+                        <span class="button-text">Pay with Card</span>
+                        <div class="spinner" style="display: none;"></div>
+                    </button>
+                </form>
+            </section>
+
+            <!-- Order Confirmation Section -->
+            <section id="orderConfirmation" class="checkout-section">
+                <div class="confirmation-content">
+                    <div class="success-checkmark animate"></div>
+                    <h2>Order Confirmation</h2>
+                    <div class="confirmation-details">
+                        <div class="order-number">
+                            <h3>Order Number</h3>
+                            <p id="orderNumber"></p>
+                        </div>
+                        <div class="payment-status">
+                            <h3>Payment Status</h3>
+                            <p id="paymentStatus"></p>
+                        </div>
+                        <div class="delivery-details">
+                            <h3>Delivery Details</h3>
+                            <p id="deliveryAddress"></p>
+                        </div>
+                    </div>
+                    <button class="btn-primary" onclick="window.location.href='index.html'">Continue Shopping</button>
+                </div>
+            </section>
+        </div>
+
+        <!-- Order Summary Sidebar -->
+        <aside class="order-summary">
+            <h2>Order Summary</h2>
+            <div class="cart-items" id="checkoutCartItems">
+                <!-- Cart items will be dynamically loaded here -->
+            </div>
+            <div class="summary-totals">
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="subtotal">KSh 0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <span id="shipping">KSh 0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Tax (16% VAT)</span>
+                    <span id="tax">KSh 0.00</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total</span>
+                    <span id="total">KSh 0.00</span>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay hidden">
+        <div class="loading-icon">
+            <div class="loading-circle"></div>
+            <div class="loading-circle"></div>
+            <div class="loading-circle"></div>
+        </div>
+        <p id="loadingMessage">Processing payment...</p>
+    </div>
+
+    <noscript>
+        <p style="color: red; text-align: center;">JavaScript is disabled in your browser. Please enable it for the best experience.</p>
+    </noscript>
+
+    <!-- Scripts -->
+    <script src="js/checkout.js"></script>
+    <script src="js/payments/mpesa.js"></script>
+    <script src="js/payments/visa.js"></script>
+</body>
+</html>

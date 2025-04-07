@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Wishlist</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/wishlist.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Include your header here -->
+
+    <main class="wishlist-page">
+        <div class="wishlist-header">
+            <h1>My Wishlist</h1>
+            <div class="wishlist-actions">
+                <button class="share-wishlist">
+                    <i class="fas fa-share-alt"></i> Share
+                </button>
+                <button class="clear-all">
+                    <i class="fas fa-trash"></i> Clear All
+                </button>
+            </div>
+        </div>
+
+        <div class="wishlist-container">
+            <div class="wishlist-grid" id="wishlistGrid">
+                <!-- Items will be dynamically added here -->
+            </div>
+
+            <div class="wishlist-empty-state hidden">
+                <i class="far fa-heart"></i>
+                <h2>Your wishlist is empty</h2>
+                <p>Save items you love to your wishlist and share them with friends</p>
+                <a href="shop.html" class="primary-btn">Start Shopping</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Include your footer here -->
+
+    <script src="js/wishlist.js"></script>
+</body>
+</html>
